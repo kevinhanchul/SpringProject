@@ -58,6 +58,6 @@ CREATE TABLE t_sell(
     runner_no varchar(50), /*선수선택(1번~7번)*/
     bet_amt int, /*배팅금액*/
     win_rate float,/*배당*/
-    ret_amt int/*환불금액*/
+    ret_amt int/*환불금액  */
 );
 
