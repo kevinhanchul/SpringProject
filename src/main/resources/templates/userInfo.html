@@ -19,5 +19,26 @@
         <td>이메일주소</td>
     </tr>
 </table>
-
 </html>
+
+<script>
+$(document).ready(function() {
+    $('#numberForm').on('submit', function(event) {
+        event.preventDefault();
+        var number = $('#number').val();
+
+        $.ajax({
+            url: '/userInfo',
+            method: 'POST',
+            data: { number: number },
+            success: function(response) {
+                alert(response);
+            },
+            error: function(error) {
+                console.log('Error:', error);
+                alert('오류가 발생했습니다.');
+            }
+        });
+    });
+});
+</script>
